@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency converter</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;1,200;1,400&display=swap"
+        rel="preconnect">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/container.css">
+    <link rel="stylesheet" href="CSS/form.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize-opentype.css/0.2.3/normalize-opentype.min.css"
+        integrity="sha512-0i+Cj480FEdmxsDzL2o0Uj5UEA3Z27RTCP1DZrgJpuIZe6oRbfDA35LCTFyZIRz6WFmRtEleAcDwAip0MhcEsA=="
+        crossorigin="anonymous" />
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="header">Przelicznik walut</h1>
+    </header>
+    <div class="container">
+        <p>Wartości oznaczone * są wymagane.</p>
+
+        <form class="js-form form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Przeliczanie walut</legend>
+                <p>
+                    <lable>
+                        <span class="form__lableText">
+                            Kwota*:
+                        </span>
+                        <input class="js-amount form__field" name="amount" placeholder="Wpisz kwotę [PLN]" autofocus
+                            type="number" required min="0" step="0.01">
+                    </lable>
+                </p>
+                <p>
+                    <lable>
+                        <span class="form__lableText">
+                            Waluta*:
+                        </span>
+                        <select class="js-currency form__field">
+                            <option class="rateEuro" value="EUR">Euro [EUR]</option>
+                            <option class="rateDolar" value="USD">Dolar amerykański [USD]</option>
+                            <option class="rateFrank" value="CHF">Frank szwajcarski [CHF]</option>
+                        </select>
+                    </lable>
+                </p>
+            </fieldset>
+            <p>
+                <button class="form__button" js-submit>Przelicz</button>
+                <button class="js-reset form__button" type="reset">Wyczyść formularz</button>
+            </p>
+            <div class="js-score form__div">
+                Wynik:
+            </div>
+
+        </form>
+    </div>
+
+</body>
